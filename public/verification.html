@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="dashboard.html">Dashboard</a></nav></header>
+<main><div class="card"><h1>Verify your account</h1>
+<p class="sub">Upload a document that proves you belong to your university. An administrator will review it.</p>
+<div id="status-box" class="banner hidden"></div>
+<form id="upload-form" novalidate>
+<label for="document_type">Document type</label><select id="document_type" name="document_type" required></select>
+<label for="document">File (PDF, JPG or PNG, up to 5 MB)</label>
+<input id="document" name="document" type="file" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" required>
+<p class="hint">Use a clear scan or photo. Your document is visible only to you and the administrators.</p>
+<button type="submit">Submit for review</button><div class="msg" role="alert"></div></form></div>
+<div class="card" style="margin-top:16px"><h1>Your submissions</h1>
+<p id="empty" class="sub hidden">You have not submitted anything yet.</p>
+<div id="history"></div></div></main>
+<script src="js/app.js"></script><script src="js/verification.js"></script></body></html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My profile | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide">
+
+<div class="card"><h1>My profile</h1><p class="sub" id="who">Loading...</p>
+<form id="basics-form" novalidate>
+<label for="bio">About me</label><textarea id="bio" name="bio" rows="4" maxlength="1000" placeholder="Tell others what you do and how you can help"></textarea>
+<label for="linkedin_url">LinkedIn link</label><input id="linkedin_url" name="linkedin_url" type="url" placeholder="https://www.linkedin.com/in/your-name">
+<div class="row alumni-only hidden">
+<div><label for="current_organization">Current organization</label><input id="current_organization" name="current_organization" maxlength="150"></div>
+<div><label for="designation">Designation</label><input id="designation" name="designation" maxlength="120"></div></div>
+<label>How can people connect with you?</label>
+<div class="checks"><label><input type="checkbox" name="mode" value="chat"> Chat</label>
+<label><input type="checkbox" name="mode" value="call"> Call</label>
+<label><input type="checkbox" name="mode" value="in_person"> In person</label></div>
+<label>Privacy</label>
+<div class="checks"><label><input type="checkbox" name="show_linkedin"> Show my LinkedIn link</label>
+<label><input type="checkbox" name="show_email"> Show my email</label></div>
+<div class="mentor-only hidden"><label>Mentor settings</label>
+<div class="checks"><label><input type="checkbox" name="is_accepting_requests"> Accepting new requests</label>
+<label><input type="checkbox" name="is_paused"> Pause my mentoring</label></div>
+<label for="max_active_mentees">Most mentees at one time</label><input id="max_active_mentees" name="max_active_mentees" type="number" min="1" max="20"></div>
+<button type="submit">Save profile</button><div class="msg" role="alert"></div></form></div>
+
+<div class="card sect"><h1>Topics</h1><p class="sub" id="topics-sub">Pick the topics you want help with.</p>
+<div id="topics"></div>
+<button type="button" id="save-topics">Save topics</button><div class="msg" id="topics-msg" role="alert"></div></div>
+
+<div class="card sect mentor-only hidden"><h1>Availability</h1><p class="sub">When you are usually free to mentor.</p>
+<div id="slots"></div><p id="no-slots" class="hint hidden">No slots yet.</p>
+<form id="slot-form" novalidate><div class="row3">
+<div><label for="day_of_week">Day</label><select id="day_of_week" name="day_of_week">
+<option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option>
+<option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select></div>
+<div><label for="start_time">From</label><input id="start_time" name="start_time" type="time" required></div>
+<div><label for="end_time">To</label><input id="end_time" name="end_time" type="time" required></div></div>
+<label for="slot_mode">Mode</label><select id="slot_mode" name="mode"><option value="chat">Chat</option><option value="call">Call</option><option value="in_person">In person</option></select>
+<button type="submit">Add slot</button><div class="msg" id="slot-msg" role="alert"></div></form></div>
+
+<p class="links" id="public-link-wrap"></p>
+</main>
+<script src="js/app.js"></script><script src="js/profile.js"></script></body></html>

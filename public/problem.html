@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problem | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="problems.html">Problems</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide"><div class="msg" id="pmsg" role="alert"></div>
+<div class="card hidden" id="card"><h1 id="ptitle"></h1><p class="sub" id="pmeta"></p>
+<div><span id="p-urgency" class="badge"></span> <span id="p-status" class="badge"></span></div>
+<p id="pdesc" class="pre"></p><div id="ptags" class="chips"></div>
+<div id="owner-actions" class="btn-row hidden"><button type="button" class="alt" id="resolve-none">Mark resolved</button><button type="button" class="danger" id="close-btn">Close problem</button></div></div>
+<div class="card hidden" id="offers-card"><h2 style="margin-top:0" id="offers-title">Offers</h2><div id="offers"></div></div>
+<div class="card hidden" id="offer-form-card"><h2 style="margin-top:0">Offer to help</h2>
+<form id="offer-form" novalidate><label for="offer-msg">Your message to the student</label>
+<textarea id="offer-msg" class="tall" maxlength="1000" placeholder="How can you help? Mention relevant experience."></textarea>
+<button type="submit">Send offer</button><div class="msg" id="offer-msg-box" role="alert"></div></form></div>
+<div class="card hidden" id="my-offer-card"><h2 style="margin-top:0">Your offer</h2><p id="my-offer" class="pre"></p></div>
+</main><script src="js/app.js"></script><script src="js/problem.js"></script></body></html>

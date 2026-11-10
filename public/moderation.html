@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moderation | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="admin.html">Verification queue</a><a href="admin-credits.html">Credits admin</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide"><div class="card"><h1>Moderation</h1><p class="sub">Handle reports, suspend accounts, hide reviews and read the audit log. Every action is logged.</p>
+<div class="tabs"><button type="button" class="tab active" data-tab="reports">Reports <span id="n-open"></span></button><button type="button" class="tab" data-tab="users">Users</button><button type="button" class="tab" data-tab="reviews">Reviews</button><button type="button" class="tab" data-tab="audit">Audit log</button></div>
+<div class="msg" id="mmsg" role="alert"></div>
+<section id="tab-reports"><select id="rstatus"><option value="open">Open</option><option value="reviewed">Reviewed</option><option value="actioned">Actioned</option><option value="dismissed">Dismissed</option></select><div id="rlist" class="plist"></div></section>
+<section id="tab-users" class="hidden"><form id="uform" novalidate><input id="uq" type="search" maxlength="60" placeholder="Name or email"><select id="ustatus"><option value="">Any status</option><option value="active">Active</option><option value="suspended">Suspended</option></select><button type="submit">Search</button></form><div id="ulist" class="plist"></div></section>
+<section id="tab-reviews" class="hidden"><select id="vhidden"><option value="0">Visible reviews</option><option value="1">Hidden reviews</option></select><div id="vlist" class="plist"></div></section>
+<section id="tab-audit" class="hidden"><div id="alist" class="plist"></div><div class="pager hidden" id="pager"><button type="button" class="alt small" id="prev">Newer</button><span id="page-info"></span><button type="button" class="alt small" id="next">Older</button></div></section>
+</div></main><script src="js/app.js"></script><script src="js/moderation.js"></script></body></html>

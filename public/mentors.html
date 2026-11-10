@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find mentors | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="profile.html">My profile</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide">
+<div class="card"><h1>Find a mentor</h1>
+<p class="sub">Verified seniors and alumni from your university. Results are ranked by how well they match your interests.</p>
+<form id="filter-form" novalidate>
+<label for="q">Search</label><input id="q" name="q" type="search" maxlength="80" placeholder="Name, organization or designation">
+<div class="row3">
+<div><label for="tag_id">Topic</label><select id="tag_id" name="tag_id"><option value="">Any topic</option></select></div>
+<div><label for="department_id">Department</label><select id="department_id" name="department_id"><option value="">Any department</option></select></div>
+<div><label for="role">Mentor type</label><select id="role" name="role"><option value="">Seniors and alumni</option><option value="senior">Seniors</option><option value="alumni">Alumni</option></select></div></div>
+<div class="row3">
+<div><label for="mode">Connect by</label><select id="mode" name="mode"><option value="">Any way</option><option value="chat">Chat</option><option value="call">Call</option><option value="in_person">In person</option></select></div>
+<div><label for="day">Free on</label><select id="day" name="day"><option value="">Any day</option><option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option><option value="6">Saturday</option><option value="0">Sunday</option></select></div>
+<div><label for="sort">Sort by</label><select id="sort" name="sort"><option value="best">Best match</option><option value="rating">Highest rated</option><option value="newest">Newest</option><option value="name">Name (A to Z)</option></select></div></div>
+<div class="checks" style="margin-top:10px"><label><input type="checkbox" name="available" value="1"> Only mentors accepting requests</label></div>
+<button type="submit">Search</button> <button type="button" class="link" id="reset">Clear filters</button>
+<div class="msg" id="search-msg" role="alert"></div></form></div>
+<p class="sub" id="summary" style="margin:14px 2px 0"></p>
+<div id="results" class="grid"></div>
+<div class="pager hidden" id="pager"><button type="button" class="alt small" id="prev">Previous</button><span id="page-info"></span><button type="button" class="alt small" id="next">Next</button></div>
+</main>
+<script src="js/app.js"></script><script src="js/mentors.js"></script></body></html>

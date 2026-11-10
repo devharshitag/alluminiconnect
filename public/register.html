@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="login.html">Log in</a><a href="register.html">Register</a></nav></header>
+<main><div class="card"><h1>Create your account</h1><p class="sub">Join as a student, senior, or alumni.</p>
+<form id="register-form" data-api="/api/auth/register" novalidate>
+<label>I am a</label>
+<div class="roles">
+<label><input type="radio" name="role" value="student" checked>Student</label>
+<label><input type="radio" name="role" value="senior">Senior</label>
+<label><input type="radio" name="role" value="alumni">Alumni</label></div>
+<label for="full_name">Full name</label><input id="full_name" name="full_name" autocomplete="name" required>
+<label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
+<div class="hint">Students and seniors must use their university email. Alumni may use any email.</div>
+<label for="password">Password</label><input id="password" name="password" type="password" autocomplete="new-password" required>
+<div class="hint">At least 8 characters with uppercase, lowercase, and a digit.</div>
+<label for="university_id">University</label><select id="university_id" name="university_id" required></select>
+<label for="department_id">Department</label><select id="department_id" name="department_id" required></select>
+<div class="row"><div><label for="enrollment_no">Enrollment / roll no.</label><input id="enrollment_no" name="enrollment_no" required></div>
+<div><label for="program">Program</label><input id="program" name="program" placeholder="e.g. B.Tech" required></div></div>
+<div id="year-field"><label for="year_of_study">Year of study</label>
+<select id="year_of_study" name="year_of_study"><option value="">Select year</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+<div id="alumni-fields" class="hidden">
+<div class="row"><div><label for="graduation_year">Graduation year</label><input id="graduation_year" name="graduation_year" type="number" min="1990" max="2100"></div>
+<div><label for="designation">Designation</label><input id="designation" name="designation"></div></div>
+<label for="current_organization">Current organization</label><input id="current_organization" name="current_organization">
+<label for="linkedin_url">LinkedIn URL (optional)</label><input id="linkedin_url" name="linkedin_url" type="url" placeholder="https://www.linkedin.com/in/..."></div>
+<button type="submit">Create account</button><div class="msg" role="alert"></div></form>
+<p class="links">Already registered? <a href="login.html">Log in</a></p></div></main>
+<script src="js/app.js"></script></body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credits admin | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="admin.html">Verification queue</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide"><div class="card"><h1>Credits admin</h1><p class="sub">Correct credits when something went wrong, and award the monthly badge. Every change is written to the audit log and the mentor is notified.</p>
+<button type="button" id="mom">Award Mentor of the Month</button><div class="msg" id="amsg" role="alert"></div></div>
+<div class="card" style="margin-top:16px"><h2 style="margin-top:0">Find a mentor</h2>
+<form id="sform" novalidate><input id="q" type="search" maxlength="60" placeholder="Name or email"><button type="submit">Search</button></form>
+
+<div id="alist"></div>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h2>Admin Audit Log</h2>
+  <p class="sub">Recent administrative actions.</p>
+  <p id="audit-status">Loading audit log...</p>
+  <div id="audit-list"></div>
+</div>
+</main>
+
+<script src="js/app.js"></script><script src="js/admin-credits.js"></script></body></html>

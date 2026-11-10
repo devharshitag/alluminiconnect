@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My credits | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="leaderboard.html">Leaderboard</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main class="wide"><div class="msg" id="cmsg" role="alert"></div>
+<div class="card hidden" id="card"><h1>My credits</h1><p class="sub" id="csub"></p>
+<div class="stats" id="stats"></div><p class="hint" id="progress"></p></div>
+<div class="card hidden" id="badge-card"><h2 style="margin-top:0">Badges</h2><div class="badges" id="badges"></div></div>
+<div class="card hidden" id="how-card"><h2 style="margin-top:0">How credits work</h2>
+<ul class="plain"><li>+10 for every completed session (up to 5 a day)</li><li>+5 when a student rates a session 4 or 5 stars</li><li>+15 when a student marks your help as the solution to their problem</li><li>-10 if a student reports that you missed a session</li></ul>
+<p class="hint">Levels: Bronze 50, Silver 200, Gold 500 credits.</p></div>
+<div class="card hidden" id="hist-card"><h2 style="margin-top:0">History</h2><p class="hint hidden" id="no-hist">No credit activity yet.</p>
+<table class="tbl"><thead><tr><th>Date</th><th>Reason</th><th>Credits</th></tr></thead><tbody id="hist"></tbody></table></div>
+</main><script src="js/app.js"></script><script src="js/credits.js"></script></body></html>

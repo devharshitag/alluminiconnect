@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="login.html">Log in</a><a href="register.html">Register</a></nav></header>
+<main><div class="card"><h1>Welcome back</h1><p class="sub">Log in to your Student Assist account.</p>
+<form data-api="/api/auth/login" data-next="dashboard.html" novalidate>
+<label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
+<label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+<button type="submit">Log in</button><div class="msg" role="alert"></div></form>
+<p class="links"><a href="forgot-password.html">Forgot password?</a> &nbsp;|&nbsp; New here? <a href="register.html">Create an account</a> &nbsp;|&nbsp; <a href="verify-email.html">Verify email</a></p></div></main>
+<script src="js/app.js"></script></body></html>

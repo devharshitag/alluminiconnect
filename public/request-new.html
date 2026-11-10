@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request mentorship | Student Assist</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><a href="index.html">Student Assist</a><nav><a href="mentors.html">Find mentors</a><a href="requests.html">Requests</a><a href="dashboard.html">Dashboard</a></nav></header>
+<main><div class="card"><h1>Request mentorship</h1><p class="sub" id="to">Loading...</p>
+<form id="req-form" novalidate class="hidden">
+<label for="goal">Your goal</label><input id="goal" name="goal" maxlength="255" placeholder="e.g. Prepare for product-company interviews">
+<label for="message">Message</label><textarea id="message" name="message" class="tall" maxlength="2000" placeholder="Introduce yourself and say what help you need."></textarea>
+<p class="hint" id="problem-note"></p>
+<button type="submit">Send request</button><div class="msg" id="req-msg" role="alert"></div></form></div></main>
+<script src="js/app.js"></script><script src="js/request-new.js"></script></body></html>
